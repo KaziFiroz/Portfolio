@@ -1,0 +1,305 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f1419;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(15, 20, 25, 0.95);
+    padding: 20px 0;
+    z-index: 100;
+    border-bottom: 1px solid #2a2f3a;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.bracket {
+    color: #5b7fff;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #b0b8c1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #5b7fff;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(91, 127, 255, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    top: 10%;
+    right: 10%;
+    filter: blur(60px);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.greeting {
+    font-size: 20px;
+    color: #b0b8c1;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #5b7fff, #9b5bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.role {
+    font-size: 32px;
+    color: #b0b8c1;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 18px;
+    color: #8a92a0;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #5b7fff, #9b5bff);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(91, 127, 255, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #5b7fff;
+}
+
+.btn-secondary:hover {
+    background: #5b7fff;
+    transform: translateY(-2px);
+}
+
+/* Code Box */
+.code-box {
+    background: rgba(30, 35, 45, 0.8);
+    border: 1px solid #2a2f3a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.code-header {
+    background: rgba(20, 25, 30, 0.9);
+    padding: 12px 16px;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #2a2f3a;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot.red {
+    background: #ff5f56;
+}
+
+.dot.yellow {
+    background: #ffbd2e;
+}
+
+.dot.green {
+    background: #27c93f;
+}
+
+.code-body {
+    padding: 24px;
+    font-family: 'Courier New', monospace;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.keyword {
+    color: #c792ea;
+}
+
+.variable {
+    color: #82aaff;
+}
+
+.string {
+    color: #c3e88d;
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(15, 20, 25, 0.95);
+    border-top: 1px solid #2a2f3a;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left p {
+    color: #8a92a0;
+    font-size: 14px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: #b0b8c1;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #5b7fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .role {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .code-body {
+        font-size: 13px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 32px;
+    }
+
+    .role {
+        font-size: 20px;
+    }
+
+    .greeting {
+        font-size: 16px;
+    }
+}
